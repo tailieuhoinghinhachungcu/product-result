@@ -1,0 +1,30 @@
+<!-- product-result.html -->
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <title>Thông tin sản phẩm</title>
+  <style>
+    body { font-family: sans-serif; padding: 20px; background: #f5f5f5; }
+    .card { background: #fff; padding: 20px; border-radius: 10px; box-shadow: 0 2px 6px rgba(0,0,0,0.1); }
+    h1 { color: #333; }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <h1>Thông tin sản phẩm</h1>
+    <p><strong>Mã SP:</strong> <span id="masp"></span></p>
+    <p><strong>Tên SP:</strong> <span id="tensp"></span></p>
+    <p><strong>Mô tả:</strong> <span id="mota"></span></p>
+    <p><strong>Giá:</strong> <span id="gia"></span></p>
+  </div>
+
+  <script>
+    const params = new URLSearchParams(window.location.search);
+    document.getElementById("masp").innerText = params.get("masp");
+    document.getElementById("tensp").innerText = params.get("tensp");
+    document.getElementById("mota").innerText = params.get("mota");
+    document.getElementById("gia").innerText = params.get("gia");
+  </script>
+</body>
+</html>
